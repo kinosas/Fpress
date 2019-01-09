@@ -1,0 +1,7 @@
+div.container{
+    width: inherit;
+    height: fit-content;
+    background-color: gold;
+    word-wrap: break-word;
+    word-break: keep-all;
+}

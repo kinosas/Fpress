@@ -1,0 +1,20 @@
+{% extends "admin/base.html" %}
+{% block content %}
+
+<h1>admin new</h1>
+
+<form method="POST" action='/admin/add/'>
+    <input name='id' placeholder="id">
+    <input name='link' placeholder="链接">
+    <select name='private'>
+        <option value ="False">公开</option>
+        <option value ="True">私有</option>
+    </select>
+    <input name='title' placeholder="标题">
+    <input name='author' placeholder="作者">
+    <input name='abstract' placeholder="摘要">
+    <input name='content' placeholder="内容">
+    <button type="submit">提交</button>
+</form>
+
+{% endblock %}

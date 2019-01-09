@@ -1,0 +1,19 @@
+{% extends "admin/base.html" %}
+{% block content %}
+
+<h1>Admin Login</h1>
+
+<div>
+    <form method="POST" action="/admin/verify/">
+        {{ loginform.id.label }}
+        {{ loginform.id }}
+        <br>
+        {{ loginform.password.label }}
+        {{ loginform.password }}
+        <br>
+        {{ loginform.submit }}
+    </form>
+</div>
+
+
+{% endblock %}

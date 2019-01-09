@@ -1,0 +1,14 @@
+{% extends "visitor/base.html" %}
+{% block content %}
+
+{% for article in articles %}
+<div>
+    <ul>
+        <li><h3>Title: {{ article.title }}</h3></li>
+        <li>Abstract: {{ article.abstract }}</li>
+    </ul>
+    <hr>
+</div>
+{% endfor %}
+
+{% endblock %}

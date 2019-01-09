@@ -1,0 +1,31 @@
+{% extends "admin/base.html" %}
+{% block content %}
+
+<h1>Admin Center</h1>
+
+<a href="/admin/new/">新建文章</a>
+    <br>
+<a href="/admin/logout/">登出</a>
+
+<hr />
+
+{% for article in articles %}
+<div>
+    <ul>
+        <li><h3>Title: {{ article.title }}</h3></li>
+        <li>Author: {{ article.author }}</li>
+        <li>Browsed: {{ article.browsed }}</li>
+        <li>Private:
+            {% if article.private %}
+                私密
+            {% else %}
+                公开
+            {% endif %}
+        </li>
+        <li>Abstract: {{ article.abstract }}</li>
+    </ul>
+</div>
+    <hr>
+{% endfor %}
+
+{% endblock %}
